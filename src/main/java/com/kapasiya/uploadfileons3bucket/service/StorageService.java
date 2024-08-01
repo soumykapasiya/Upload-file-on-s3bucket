@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
 
 @Service
@@ -35,6 +36,16 @@ public class StorageService {
         } finally {
             fileObj.delete();
         }
+    }
+
+    public String uploadMultipleFile(List<MultipartFile> files) {
+        try{
+            files.forEach(this::uploadFile);
+        }catch (Exception e) {
+            log.error("Error uploading file to S3", e);
+            return "File upload failed: " + e.getMessage();
+        }
+        return "";
     }
 
     public byte[] downloadFile(String fileName) {
