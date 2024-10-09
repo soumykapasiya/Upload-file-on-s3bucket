@@ -1,7 +1,8 @@
 cloud:
   aws:
-    accessKeyId: YOUR_ACCESS_KEY_ID
-    secretAccessKey: YOUR_SECRET_ACCESS_KEY
+    accessKeyId: ${AWS_ACCESS_KEY_ID}
+    secretAccessKey: ${AWS_SECRET_ACCESS_KEY}
+
     region:
       static: us-east-1
     stack:
