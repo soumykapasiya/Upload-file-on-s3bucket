@@ -1,16 +1,14 @@
 package com.kapasiya.uploadfileons3bucket.service;
 
+import com.kapasiya.uploadfileons3bucket.dto.CustomResponseDto;
+import com.kapasiya.uploadfileons3bucket.entity.UploadedFile;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
 public interface StorageService {
 
-    String uploadFile(MultipartFile file);
+    CustomResponseDto<Void> uploadFile(MultipartFile file);
 
-    String uploadMultipleFile(List<MultipartFile> files);
-
-    byte[] downloadFile(String fileName);
-
-    String deleteFile(String fileName);
+    List<UploadedFile> uploadFiles(MultipartFile[] files, String recordId) throws IllegalAccessException;
 }

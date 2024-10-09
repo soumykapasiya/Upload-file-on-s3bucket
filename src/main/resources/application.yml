@@ -1,12 +1,11 @@
 cloud:
   aws:
     credentials:
-      access-key: put-your-access-key
-      secret-key: put-your-secret-key
+      access-key: AKIA5FTY63JGUGOZK6MZ
+      secret-key: VVbY8E04vrPVY2+HUn4kMEGjvJWdz2MBBvS54XTY
     region:
-      static: us-east-1
-    stack:
-      auto: false
+      static: us-east-1  # Mumbai region
+
 
 spring:
   servlet:
@@ -18,3 +17,5 @@ spring:
 
 server:
   port: 9090
+
+
