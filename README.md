@@ -109,11 +109,3 @@ Contributions are welcome! Feel free to open a pull request or file an issue if 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 """
 
-# Saving the generated README content to a file
-file_path = '/mnt/data/README.md'
-
-# Writing to the file
-with open(file_path, 'w') as readme_file:
-    readme_file.write(readme_content)
-
-file_path
