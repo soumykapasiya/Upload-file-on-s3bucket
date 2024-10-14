@@ -78,26 +78,26 @@ aws.region=your-aws-region
 
 - **Upload File:**
 
-  \`POST /api/files/upload\`
+  \`POST /api/file/upload\`
 
   Upload a file to the S3 bucket.
 
 - **Download File:**
 
-  \`GET /api/files/download/{filename}\`
+  \`GET /api/file/download/{filename}\`
 
   Download a file from the S3 bucket.
 
 - **Delete File:**
 
-  \`DELETE /api/files/delete/{filename}\`
+  \`DELETE /api/file/delete/{filename}\`
 
   Delete a file from the S3 bucket.
 
 ### Example Request (File Upload)
 
 \`\`\`bash
-curl -X POST "http://localhost:8080/api/files/upload" -F "file=@path-to-your-file"
+curl -X POST "http://localhost:9090/api/files/upload" -F "file=@path-to-your-file"
 \`\`\`
 
 ## Contributing
